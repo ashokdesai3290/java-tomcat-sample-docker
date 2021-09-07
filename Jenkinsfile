@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tool {
+        maven 'LocalMaven'
+    }
     environment {
         //PATH = "/Applications/apache-maven-3.8.2/bin:$PATH"
         PATH = "/usr/local/bin:$PATH"
