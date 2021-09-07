@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    tools {
-        maven 'LocalMaven'
-    }
+    // tools {
+    //     maven 'LocalMaven'
+    // }
     environment {
-        //PATH = "/Applications/apache-maven-3.8.2/bin:$PATH"
-        PATH = "/usr/local/bin:$PATH"
+        PATH = "/Applications/apache-maven-3.8.2/bin:$PATH"
+        //PATH = "/usr/local/bin:$PATH"
     }
     stages {
         stage('Build Application') {
