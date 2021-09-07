@@ -1,11 +1,10 @@
 pipeline {
     agent any
-    // tools {
+    //tools {
     //     maven 'LocalMaven'
     // }
     environment {
         PATH = "/Applications/apache-maven-3.8.2/bin:$PATH"
-        //PATH = "/usr/local/bin:$PATH"
     }
     stages {
         stage('Build Application') {
@@ -24,7 +23,7 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -a"
-                sh "docker run . -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
     }
